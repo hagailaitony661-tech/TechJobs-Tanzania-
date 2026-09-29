@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TechJobs Tanzania</title>
+<meta name="theme-color" content="#0b0920">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;600;800&display=swap">
+<meta name="description" content="Connecting Tanzania's Technology Talent with Opportunities">
+<style>
+:root{--pk:#FF4FA3;--bl:#2563EB;--bg:#fff;--bg2:#f4f6fc;--tx:#141a2e;--mu:#5d6785;--bd:#e3e7f3;--g:linear-gradient(120deg,#FF4FA3,#2563EB)}
+[data-t=dark]{--bg:#0d1120;--bg2:#161c33;--tx:#eef1fb;--mu:#a3acc9;--bd:#283052}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 "Trebuchet MS",system-ui,sans-serif;background:var(--bg);color:var(--tx)}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}
+a{color:var(--bl)}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--bd);display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:8px 12px}
+.logo{font-weight:800;font-size:19px;cursor:pointer;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent;margin-right:auto}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+button,.btn{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--bg2);color:var(--tx);padding:8px 14px;border-radius:10px}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--pk);outline-offset:1px}
+.pri{background:var(--g);color:#fff;border:0;font-weight:700}
+.dng{color:#d6254a}
+main{max-width:980px;margin:0 auto;padding:16px 14px 60px}
+.hero{background:var(--g);color:#fff;border-radius:22px;padding:34px 22px;margin-bottom:22px}
+.hero h1{font-size:clamp(28px,6vw,46px)}
+.hero p{max-width:520px;opacity:.95}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+input,select,textarea{font:inherit;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);width:100%}
+.bar input,.bar select{flex:1 1 150px;width:auto}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.card{border:1px solid var(--bd);border-radius:14px;padding:14px;background:var(--bg2)}
+.card h3{font-size:17px;margin-bottom:2px}
+.mu{color:var(--mu);font-size:14px}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;border:1px solid var(--bd);margin:4px 4px 0 0;background:var(--bg)}
+.ft{border-color:var(--pk);color:var(--pk);font-weight:700}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:18px}
+.chips button{white-space:nowrap;border-radius:99px}
+.chips .on{background:var(--bl);color:#fff;border-color:var(--bl)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:18px}
+.stat{border:1px solid var(--bd);border-radius:14px;padding:12px;background:var(--bg2)}
+.stat b{font-size:26px;display:block;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.form{max-width:440px;margin:0 auto;display:grid;gap:10px}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.tabs .on{background:var(--pk);color:#fff;border-color:var(--pk)}
+.modal{position:fixed;inset:0;background:#0009;display:flex;align-items:flex-end;justify-content:center;z-index:9}
+.modal>div{background:var(--bg);width:100%;max-width:620px;max-height:90vh;overflow:auto;border-radius:20px 20px 0 0;padding:20px;animation:up .25s}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+#toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 18px;border-radius:99px;z-index:20;display:none}
+.st{font-weight:700}.Pending{color:#b7791f}.Shortlisted,.Interview,.approved{color:#15803d}.Rejected,.rejected{color:#d6254a}
+footer{text-align:center;color:var(--mu);font-size:13px;padding:20px}
+@media(min-width:700px){.modal{align-items:center}.modal>div{border-radius:20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* LUXURY THEME */
+:root{--bg:#fdfbfe;--bg2:#fff;--tx:#17122b;--mu:#6a6482;--bd:#eae4f2;--gold:#B8935A}
+[data-t=dark]{--bg:#0a0816;--bg2:#141026;--tx:#f3eefb;--mu:#a9a2c2;--bd:#2a2445;--gold:#D9B57A}
+body{font-family:Manrope,"Segoe UI",system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700}
+h2{font-size:32px}h3{font-size:21px}
+header{backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 85%,transparent);padding:12px 18px}
+.logo{font-size:26px}
+button,.btn{border-radius:99px}
+.pri{box-shadow:0 10px 26px -10px var(--pk)}
+input,select,textarea{border-radius:14px}
+.hero{background:radial-gradient(560px 300px at 92% -10%,#FF4FA3aa,transparent),radial-gradient(700px 420px at -10% 115%,#2563EBcc,transparent),#0b0920;border-radius:30px;padding:60px 26px;border:1px solid #ffffff22;box-shadow:0 30px 80px -34px #2563EB}
+.hero h1{font-size:clamp(40px,9vw,72px);font-weight:600;max-width:640px}
+.hero p{font-size:18px;color:#ebe6f8;max-width:520px}
+.big{padding:14px 26px;font-size:17px}
+.ghost{background:transparent;color:#fff;border:1px solid #ffffff88}
+.hero .bar input{background:#ffffff14;border-color:#ffffff33;color:#fff}
+.hero input::placeholder{color:#cfc8e6}
+.small{font-size:14px;color:#cfc8e6;margin-top:12px}
+.card{background:var(--bg2);border-radius:20px;padding:18px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -24px #2563EB}
+.ft{border-color:var(--gold);color:var(--gold)}
+.steps .card b{font:700 48px "Cormorant Garamond",Georgia,serif;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;line-height:1}
+.stat{background:var(--bg2);border-radius:18px}
+.stat b{font-family:"Cormorant Garamond",Georgia,serif}
+.modal>div{background:var(--bg)}
+footer{border-top:1px solid var(--gold);margin-top:30px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo" onclick="go('home')">TechJobs Tanzania</div>
+  <nav id="nav"></nav>
+</header>
+<main id="app"></main>
+<footer>TechJobs Tanzania — Connecting Tanzania's Technology Talent with Opportunities</footer>
+<div id="modal" class="modal" hidden></div>
+<div id="toast"></div>
+<script>
+const CATS=["Software Development","Web Development","Mobile App Development","Cybersecurity","Networking","Database Administration","Data Science","Artificial Intelligence","Machine Learning","Cloud Computing","DevOps Engineering","UI/UX Design","Graphic Design","IT Support","Systems Administration","Computer Engineering","ICT Officer","Digital Marketing","Technology Training"];
+const LEVELS=["Entry","Mid","Senior"];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const uid=()=>Math.random().toString(36).slice(2,9);
+const today=()=>new Date().toISOString().slice(0,10);
+const tzs=n=>n?Number(n).toLocaleString("en-US")+" TZS":"Negotiable";
+
+function seed(){
+  const J=(t,c,cat,loc,sal,lv,f)=>({id:uid(),title:t,company:c,emp:"e1",cat,loc,salary:sal,level:lv,desc:"Tunatafuta mtaalamu mwenye ujuzi wa "+t+". Utafanya kazi na timu ya wataalamu, ukijenga suluhisho halisi kwa wateja wa Tanzania. Tuma CV yako na barua fupi.",status:"approved",date:today(),featured:f});
+  return{users:[
+    {id:"a1",role:"admin",name:"Admin",email:"admin@techjobs.co.tz",pw:"admin123"},
+    {id:"e1",role:"employer",name:"Demo Tech Ltd",email:"hr@demo.co.tz",pw:"demo123",verified:true,site:"",loc:"Dar es Salaam",about:"Kampuni ya teknolojia Dar es Salaam."}],
+    jobs:[J("Flutter Developer","Demo Tech Ltd","Mobile App Development","Dar es Salaam",1500000,"Mid",true),
+      J("Frontend Developer (React)","Demo Tech Ltd","Web Development","Arusha",1200000,"Entry",true),
+      J("Network Engineer","Demo Tech Ltd","Networking","Dodoma",1800000,"Senior",false),
+      J("Cybersecurity Analyst","Demo Tech Ltd","Cybersecurity","Dar es Salaam",2200000,"Mid",true),
+      J("ICT Officer","Demo Tech Ltd","ICT Officer","Mwanza",900000,"Entry",false),
+      J("Data Analyst","Demo Tech Ltd","Data Science","Dar es Salaam",1400000,"Entry",false)],
+    apps:[],saved:{},notes:[],session:null,dark:false};
+}
+let DB;
+try{DB=JSON.parse(localStorage.getItem("tj"))}catch(e){}
+DB=DB||seed();
+const save=()=>{try{localStorage.setItem("tj",JSON.stringify(DB))}catch(e){}};
+let V={page:"home",q:"",cat:"",loc:"",lv:"",sal:"",tab:"a",mode:"login"};
+const me=()=>DB.users.find(u=>u.id===DB.session);
+const toast=m=>{const t=$("#toast");t.textContent=m;t.style.display="block";clearTimeout(t.k);t.k=setTimeout(()=>t.style.display="none",2600)};
+const note=(to,text)=>DB.notes.unshift({id:uid(),to,text,date:today(),read:false});
+function go(p,x){V.page=p;Object.assign(V,x||{});render();scrollTo(0,0)}
+function modal(h){const m=$("#modal");if(!h){m.hidden=true;return}m.innerHTML="<div>"+h+"</div>";m.hidden=false}
+$("#modal").onclick=e=>{if(e.target.id==="modal")modal()};
+
+function renderNav(){
+  const u=me(),n=u?DB.notes.filter(x=>x.to===u.id&&!x.read).length:0;
+  let h='<button onclick="go(\'jobs\')">Kazi</button>';
+  if(u){
+    h+=`<button onclick="go('${u.role==="admin"?"admin":u.role==="employer"?"employer":"me"}')">${u.role==="admin"?"Admin":u.role==="employer"?"Dashboard":"Wasifu"}</button>`;
+    h+=`<button onclick="showNotes()" aria-label="Arifa">🔔${n?" "+n:""}</button><button onclick="logout()">Toka</button>`;
+  }else h+='<button class="pri" onclick="go(\'auth\')">Ingia</button>';
+  h+=`<button onclick="theme()" aria-label="Badili mwonekano">${DB.dark?"☀️":"🌙"}</button>`;
+  $("#nav").innerHTML=h;
+}
+function theme(){DB.dark=!DB.dark;save();document.documentElement.dataset.t=DB.dark?"dark":"";render()}
+function showNotes(){
+  const u=me(),l=DB.notes.filter(x=>x.to===u.id);
+  modal(`<h2>Arifa</h2>${l.map(x=>`<div class="card" style="margin-bottom:8px">${esc(x.text)}<div class="mu">${x.date}</div></div>`).join("")||'<p class="mu">Hakuna arifa bado.</p>'}<button onclick="modal()">Funga</button>`);
+  l.forEach(x=>x.read=true);save();renderNav();
+}
+
+function jobCard(j){
+  const u=me(),s=u&&DB.saved[u.id]?.includes(j.id);
+  return `<div class="card"><h3>${esc(j.title)}</h3><div class="mu">${esc(j.company)} · ${esc(j.loc)}</div>
+  <span class="tag">${esc(j.cat)}</span><span class="tag">${j.level}</span>${j.featured?'<span class="tag ft">Featured</span>':""}
+  <div class="mu" style="margin-top:6px">${tzs(j.salary)}</div>
+  <div class="row"><button class="pri" onclick="jobView('${j.id}')">Angalia</button><button onclick="toggleSave('${j.id}')">${s?"★ Imehifadhiwa":"☆ Hifadhi"}</button></div></div>`;
+}
+const approved=()=>DB.jobs.filter(j=>j.status==="approved");
+function filtered(){
+  const q=V.q.toLowerCase();
+  return approved().filter(j=>(!q||(j.title+j.company+j.desc).toLowerCase().includes(q))&&(!V.cat||j.cat===V.cat)&&(!V.loc||j.loc.toLowerCase().includes(V.loc.toLowerCase()))&&(!V.lv||j.level===V.lv)&&(!V.sal||j.salary>=+V.sal));
+}
+
+function pgHome(){
+  const feat=approved().filter(j=>j.featured).slice(0,4),late=approved().slice(0,6);
+  return `<section class="hero"><h1>Kazi za teknolojia Tanzania, mahali pamoja.</h1><p>Wewe ni mtaalamu wa teknolojia? Pata kazi. Ni kampuni? Pata wataalamu bora. Kujiunga ni bure.</p>
+  <div class="row" style="margin:20px 0"><button class="pri big" onclick="go('auth',{mode:'signup',role:'seeker'})">Natafuta kazi</button><button class="ghost big" onclick="go('auth',{mode:'signup',role:'employer'})">Natafuta wafanyakazi</button></div>
+  <div class="bar"><input id="hq" placeholder="Andika kazi au ujuzi, mf. Flutter" aria-label="Tafuta kazi"><button class="pri" onclick="V.q=$('#hq').value;go('jobs')">Tafuta kazi</button></div></section>
+  <div class="stats"><div class="stat"><b>${approved().length}</b>Kazi wazi</div><div class="stat"><b>${DB.users.filter(u=>u.role==="employer").length}</b>Waajiri</div><div class="stat"><b>${DB.users.filter(u=>u.role==="seeker").length}</b>Wanatafuta kazi</div><div class="stat"><b>${DB.apps.length}</b>Maombi</div></div>
+  <h2 style="margin-top:8px">Inafanyaje kazi?</h2><div class="grid steps" style="margin-bottom:28px">
+  <div class="card"><b>1</b><h3>Fungua akaunti</h3><p class="mu">Chagua kama unatafuta kazi au unaajiri. Inachukua dakika moja.</p></div>
+  <div class="card"><b>2</b><h3>Tafuta au tangaza</h3><p class="mu">Wataalamu hutafuta kwa jina la kazi, mji au mshahara. Kampuni hutangaza nafasi.</p></div>
+  <div class="card"><b>3</b><h3>Omba na ufuatilie</h3><p class="mu">Tuma CV yako, kisha uone hali ya ombi: Pending, Shortlisted au Interview.</p></div></div>
+  <h2>Kazi zilizoangaziwa</h2><div class="grid">${feat.map(jobCard).join("")}</div>
+  <h2 style="margin-top:26px">Kategoria</h2><div class="chips" style="flex-wrap:wrap">${CATS.map(c=>`<button onclick="go('jobs',{cat:'${c}'})">${c}</button>`).join("")}</div>
+  <h2>Kazi mpya</h2><div class="grid">${late.map(jobCard).join("")}</div>
+  <h2 style="margin-top:26px">Kampuni</h2><div class="grid">${DB.users.filter(u=>u.role==="employer"&&u.verified).map(u=>`<div class="card"><h3>${esc(u.name)} ✔</h3><div class="mu">${esc(u.about||"")}</div></div>`).join("")}</div>`;
+}
+function pgJobs(){
+  const l=filtered();
+  return `<h2>Tafuta kazi</h2><div class="bar" style="margin:0 0 14px"><input id="fq" value="${esc(V.q)}" placeholder="Neno kuu" aria-label="Neno kuu" oninput="V.q=this.value;list()">
+  <select aria-label="Kategoria" onchange="V.cat=this.value;list()"><option value="">Kategoria zote</option>${CATS.map(c=>`<option ${V.cat===c?"selected":""}>${c}</option>`).join("")}</select>
+  <input placeholder="Mji" value="${esc(V.loc)}" aria-label="Mji" oninput="V.loc=this.value;list()">
+  <select aria-label="Ngazi" onchange="V.lv=this.value;list()"><option value="">Ngazi yoyote</option>${LEVELS.map(c=>`<option ${V.lv===c?"selected":""}>${c}</option>`).join("")}</select>
+  <input type="number" placeholder="Mshahara wa chini" value="${V.sal}" aria-label="Mshahara wa chini" oninput="V.sal=this.value;list()"></div><div id="list"></div>`;
+}
+function list(){$("#list").innerHTML=filtered().map(jobCard).join("")?'<div class="grid">'+filtered().map(jobCard).join("")+"</div>":'<p class="mu">Hakuna kazi zinazolingana. Jaribu kubadilisha vichujio.</p>'}
+function jobView(id){
+  const j=DB.jobs.find(x=>x.id===id);
+  modal(`<h2>${esc(j.title)}</h2><div class="mu">${esc(j.company)} · ${esc(j.loc)} · ${tzs(j.salary)}</div><span class="tag">${esc(j.cat)}</span><span class="tag">${j.level}</span>
+  <p>${esc(j.desc)}</p><div class="row"><button class="pri" onclick="applyForm('${j.id}')">Omba kazi</button><button onclick="reportJob('${j.id}')">Ripoti kazi feki</button><button onclick="modal()">Funga</button></div>`);
+}
+function reportJob(id){const a=DB.users.find(u=>u.role==="admin");note(a.id,"Ripoti ya kazi feki: "+DB.jobs.find(j=>j.id===id).title);save();modal();toast("Ripoti imetumwa kwa admin")}
+function toggleSave(id){
+  const u=me();if(!u||u.role!=="seeker"){toast("Ingia kama mtafuta kazi ili kuhifadhi");return go("auth")}
+  const l=DB.saved[u.id]=DB.saved[u.id]||[];const i=l.indexOf(id);i<0?l.push(id):l.splice(i,1);save();render();
+}
+function applyForm(id){
+  const u=me();
+  if(!u||u.role!=="seeker"){modal();toast("Ingia kama mtafuta kazi ili kuomba");return go("auth")}
+  if(DB.apps.some(a=>a.job===id&&a.user===u.id)){toast("Umeshaomba kazi hii");return}
+  modal(`<h2>Omba kazi</h2><p class="mu">CV: ${esc(u.cv||"Bado hujaweka CV (nenda Wasifu)")}</p><label>Barua ya maombi<textarea id="cl" rows="5" placeholder="Eleza kwa nini unafaa"></textarea></label><div class="row"><button class="pri" onclick="doApply('${id}')">Tuma ombi</button><button onclick="modal()">Ghairi</button></div>`);
+}
+function doApply(id){
+  const u=me(),j=DB.jobs.find(x=>x.id===id);
+  DB.apps.push({id:uid(),job:id,user:u.id,cover:$("#cl").value,cv:u.cv||"",status:"Pending",date:today()});
+  note(j.emp,u.name+" ameomba "+j.title);save();modal();toast("Ombi limetumwa");render();
+}
+function pgAuth(){
+  const s=V.mode==="signup";
+  return `<div class="form"><h2>${s?"Fungua akaunti":"Ingia"}</h2>
+  ${s?`<input id="an" placeholder="Jina kamili / Jina la kampuni" aria-label="Jina"><select id="ar" aria-label="Aina ya akaunti"><option value="seeker" ${V.role!=="employer"?"selected":""}>Natafuta kazi</option><option value="employer" ${V.role==="employer"?"selected":""}>Mwajiri (natafuta wafanyakazi)</option></select><input id="ap" placeholder="Namba ya simu" aria-label="Simu">`:""}
+  <input id="ae" type="email" placeholder="Barua pepe" aria-label="Barua pepe"><input id="aw" type="password" placeholder="Nenosiri (angalau 6)" aria-label="Nenosiri">
+  <label class="mu"><input type="checkbox" id="rm" style="width:auto" checked> Nikumbuke</label>
+  <button class="pri" onclick="auth()">${s?"Jisajili":"Ingia"}</button>
+  <button onclick="V.mode='${s?"login":"signup"}';render()">${s?"Nina akaunti tayari":"Sina akaunti — jisajili"}</button>
+  ${s?"":`<button onclick="forgot()">Nimesahau nenosiri</button><p class="mu">Jaribu: admin@techjobs.co.tz / admin123 au hr@demo.co.tz / demo123</p>`}</div>`;
+}
+function auth(){
+  const e=$("#ae").value.trim().toLowerCase(),p=$("#aw").value;
+  if(V.mode==="signup"){
+    const n=$("#an").value.trim();
+    if(!n||!e.includes("@")||p.length<6)return toast("Jaza jina, barua pepe sahihi na nenosiri la angalau herufi 6");
+    if(DB.users.some(u=>u.email===e))return toast("Barua pepe hii tayari ipo");
+    const u={id:uid(),role:$("#ar").value,name:n,email:e,pw:p,phone:$("#ap").value};
+    DB.users.push(u);DB.session=u.id;
+  }else{
+    const u=DB.users.find(x=>x.email===e&&x.pw===p);
+    if(!u)return toast("Barua pepe au nenosiri si sahihi");
+    if(u.suspended)return toast("Akaunti hii imesimamishwa");
+    DB.session=u.id;
+  }
+  save();const u=me();go(u.role==="admin"?"admin":u.role==="employer"?"employer":"me");
+}
+function forgot(){const e=$("#ae").value.trim().toLowerCase();toast(e?"Kama akaunti ipo, maelekezo yatatumwa (inahitaji seva halisi)":"Andika barua pepe kwanza")}
+function logout(){DB.session=null;save();go("home")}
+
+function pgMe(){
+  const u=me();if(!u||u.role!=="seeker")return pgAuth();
+  const mine=DB.apps.filter(a=>a.user===u.id),sv=(DB.saved[u.id]||[]).map(i=>DB.jobs.find(j=>j.id===i)).filter(Boolean);
+  const T=(k,t)=>`<button class="${V.tab===k?"on":""}" onclick="V.tab='${k}';render()">${t}</button>`;
+  let b="";
+  if(V.tab==="a")b=`<div class="form" style="max-width:none">${[["name","Jina kamili"],["phone","Simu"],["addr","Anwani"],["edu","Elimu"],["skills","Ujuzi (tenganisha kwa koma)"],["exp","Uzoefu"],["certs","Vyeti"],["links","Portfolio / GitHub / LinkedIn"]].map(([k,l])=>`<label>${l}<input id="p_${k}" value="${esc(u[k])}"></label>`).join("")}
+  <label>CV (PDF/DOC/DOCX)<input type="file" id="cvf" accept=".pdf,.doc,.docx"></label><p class="mu">CV ya sasa: ${esc(u.cv||"hakuna")}</p><button class="pri" onclick="saveProfile()">Hifadhi wasifu</button></div>`;
+  if(V.tab==="p")b=mine.map(a=>{const j=DB.jobs.find(x=>x.id===a.job);return `<div class="card" style="margin-bottom:8px"><h3>${esc(j?.title)}</h3><div class="mu">${esc(j?.company)} · ${a.date}</div><div class="st ${a.status}">${a.status}</div>${a.status==="Pending"?`<div class="row"><button class="dng" onclick="withdraw('${a.id}')">Ondoa ombi</button></div>`:""}</div>`}).join("")||'<p class="mu">Bado hujaomba kazi yoyote. Anza kwa kutafuta kazi.</p>';
+  if(V.tab==="s")b=`<div class="grid">${sv.map(jobCard).join("")}</div>`+(sv.length?"":'<p class="mu">Hakuna kazi zilizohifadhiwa.</p>');
+  return `<h2>Habari, ${esc(u.name)}</h2><div class="tabs">${T("a","Wasifu")}${T("p","Maombi yangu")}${T("s","Zilizohifadhiwa")}</div>${b}`;
+}
+function saveProfile(){
+  const u=me();["name","phone","addr","edu","skills","exp","certs","links"].forEach(k=>u[k]=$("#p_"+k).value);
+  const f=$("#cvf").files[0];if(f)u.cv=f.name;
+  save();toast("Wasifu umehifadhiwa");render();
+}
+function withdraw(id){DB.apps=DB.apps.filter(a=>a.id!==id);save();render()}
+
+function pgEmp(){
+  const u=me();if(!u||u.role!=="employer")return pgAuth();
+  const jobs=DB.jobs.filter(j=>j.emp===u.id),ids=jobs.map(j=>j.id),apps=DB.apps.filter(a=>ids.includes(a.job));
+  const T=(k,t)=>`<button class="${V.tab===k?"on":""}" onclick="V.tab='${k}';render()">${t}</button>`;
+  const tab=["j","n","c","p"].includes(V.tab)?V.tab:"j";
+  let b="";
+  if(tab==="j")b=`<div class="stats"><div class="stat"><b>${jobs.filter(j=>j.status==="approved").length}</b>Kazi hai</div><div class="stat"><b>${apps.length}</b>Maombi</div><div class="stat"><b>${apps.filter(a=>a.status==="Shortlisted").length}</b>Shortlisted</div><div class="stat"><b>${apps.filter(a=>a.status==="Interview").length}</b>Interview</div></div>`+
+    jobs.map(j=>`<div class="card" style="margin-bottom:8px"><h3>${esc(j.title)}</h3><div class="mu">${j.cat} · ${j.loc}</div><div class="st ${j.status}">${j.status}</div><div class="row"><button onclick="jobForm('${j.id}')">Hariri</button><button onclick="closeJob('${j.id}')">${j.status==="closed"?"Fungua":"Funga"}</button><button class="dng" onclick="delJob('${j.id}')">Futa</button></div></div>`).join("")||'<p class="mu">Bado hujatangaza kazi.</p>';
+  if(tab==="n")b=`<div class="form" style="max-width:none">${[["name","Jina la kampuni"],["site","Tovuti"],["loc","Mahali"],["phone","Mawasiliano"],["about","Maelezo ya kampuni"]].map(([k,l])=>`<label>${l}<input id="p_${k}" value="${esc(u[k])}"></label>`).join("")}<button class="pri" onclick="saveCo()">Hifadhi</button></div>`;
+  if(tab==="c")b=apps.map(a=>{const j=DB.jobs.find(x=>x.id===a.job),s=DB.users.find(x=>x.id===a.user);return `<div class="card" style="margin-bottom:8px"><h3>${esc(s?.name)}</h3><div class="mu">${esc(j?.title)} · ${a.date}</div><div class="mu">Ujuzi: ${esc(s?.skills||"-")} · CV: ${esc(a.cv||"-")}</div><p>${esc(a.cover)}</p><div class="st ${a.status}">${a.status}</div><div class="row"><button onclick="setApp('${a.id}','Shortlisted')">Shortlist</button><button onclick="interview('${a.id}')">Interview</button><button class="dng" onclick="setApp('${a.id}','Rejected')">Kataa</button></div></div>`}).join("")||'<p class="mu">Hakuna maombi bado.</p>';
+  return `<h2>${esc(u.name)} ${u.verified?"✔":""}</h2><div class="tabs">${T("j","Kazi zangu")}${T("c","Waombaji")}${T("n","Kampuni")}<button class="pri" onclick="jobForm()">+ Tangaza kazi</button></div>${b}`;
+}
+function saveCo(){const u=me();["name","site","loc","phone","about"].forEach(k=>u[k]=$("#p_"+k).value);save();toast("Imehifadhiwa");render()}
+function jobForm(id){
+  const j=DB.jobs.find(x=>x.id===id)||{};
+  modal(`<h2>${id?"Hariri kazi":"Tangaza kazi"}</h2><div class="form" style="max-width:none"><input id="jt" placeholder="Jina la kazi" value="${esc(j.title)}" aria-label="Jina la kazi"><select id="jc" aria-label="Kategoria">${CATS.map(c=>`<option ${j.cat===c?"selected":""}>${c}</option>`).join("")}</select><input id="jl" placeholder="Mji" value="${esc(j.loc)}" aria-label="Mji"><input id="js" type="number" placeholder="Mshahara (TZS)" value="${j.salary||""}" aria-label="Mshahara"><select id="jv" aria-label="Ngazi">${LEVELS.map(c=>`<option ${j.level===c?"selected":""}>${c}</option>`).join("")}</select><textarea id="jd" rows="5" placeholder="Maelezo ya kazi" aria-label="Maelezo">${esc(j.desc)}</textarea><button class="pri" onclick="saveJob('${id||""}')">Hifadhi</button><button onclick="modal()">Ghairi</button></div>`);
+}
+function saveJob(id){
+  const u=me(),d={title:$("#jt").value.trim(),cat:$("#jc").value,loc:$("#jl").value.trim(),salary:+$("#js").value||0,level:$("#jv").value,desc:$("#jd").value.trim()};
+  if(!d.title||!d.loc||!d.desc)return toast("Jaza jina, mji na maelezo");
+  if(id)Object.assign(DB.jobs.find(j=>j.id===id),d);
+  else{DB.jobs.unshift({id:uid(),emp:u.id,company:u.name,status:"pending",date:today(),featured:false,...d});const a=DB.users.find(x=>x.role==="admin");note(a.id,"Kazi mpya inasubiri idhini: "+d.title)}
+  save();modal();toast(id?"Imehifadhiwa":"Imetumwa kwa admin kwa idhini");render();
+}
+const closeJob=id=>{const j=DB.jobs.find(x=>x.id===id);j.status=j.status==="closed"?"approved":"closed";save();render()};
+const delJob=id=>{if(confirm("Futa kazi hii?")){DB.jobs=DB.jobs.filter(j=>j.id!==id);save();render()}};
+function setApp(id,s,extra){
+  const a=DB.apps.find(x=>x.id===id),j=DB.jobs.find(x=>x.id===a.job);a.status=s;
+  note(a.user,`${j.title}: hali ya ombi lako sasa ni ${s}${extra?" ("+extra+")":""}`);save();render();
+}
+function interview(id){const d=prompt("Tarehe na saa ya interview (mf. 2026-10-05 10:00)");if(d)setApp(id,"Interview",d)}
+
+function pgAdmin(){
+  const u=me();if(!u||u.role!=="admin")return pgAuth();
+  const T=(k,t)=>`<button class="${V.tab===k?"on":""}" onclick="V.tab='${k}';render()">${t}</button>`;
+  const tab=["j","u","s"].includes(V.tab)?V.tab:"s";
+  let b="";
+  if(tab==="s")b=`<div class="stats"><div class="stat"><b>${DB.users.length}</b>Watumiaji</div><div class="stat"><b>${DB.jobs.length}</b>Kazi</div><div class="stat"><b>${DB.jobs.filter(j=>j.status==="pending").length}</b>Zinasubiri</div><div class="stat"><b>${DB.apps.length}</b>Maombi</div></div>`;
+  if(tab==="j")b=DB.jobs.map(j=>`<div class="card" style="margin-bottom:8px"><h3>${esc(j.title)}</h3><div class="mu">${esc(j.company)}</div><div class="st ${j.status}">${j.status}</div><div class="row">${j.status==="pending"?`<button class="pri" onclick="jobSt('${j.id}','approved')">Idhinisha</button>`:""}<button onclick="feat('${j.id}')">${j.featured?"Ondoa Featured":"Featured"}</button><button class="dng" onclick="delJob('${j.id}')">Ondoa</button></div></div>`).join("");
+  if(tab==="u")b=DB.users.filter(x=>x.role!=="admin").map(x=>`<div class="card" style="margin-bottom:8px"><h3>${esc(x.name)} ${x.verified?"✔":""}</h3><div class="mu">${x.role} · ${esc(x.email)} ${x.suspended?"· imesimamishwa":""}</div><div class="row">${x.role==="employer"?`<button onclick="vfy('${x.id}')">${x.verified?"Ondoa Verified":"Thibitisha"}</button>`:""}<button onclick="susp('${x.id}')">${x.suspended?"Rudisha":"Simamisha"}</button></div></div>`).join("");
+  return `<h2>Admin</h2><div class="tabs">${T("s","Takwimu")}${T("j","Kazi")}${T("u","Watumiaji")}</div>${b}`;
+}
+const jobSt=(id,s)=>{const j=DB.jobs.find(x=>x.id===id);j.status=s;note(j.emp,j.title+" imeidhinishwa");save();render()};
+const feat=id=>{const j=DB.jobs.find(x=>x.id===id);j.featured=!j.featured;save();render()};
+const vfy=id=>{const x=DB.users.find(u=>u.id===id);x.verified=!x.verified;save();render()};
+const susp=id=>{const x=DB.users.find(u=>u.id===id);x.suspended=!x.suspended;save();render()};
+
+function render(){
+  document.documentElement.dataset.t=DB.dark?"dark":"";
+  renderNav();
+  const P={home:pgHome,jobs:pgJobs,auth:pgAuth,me:pgMe,employer:pgEmp,admin:pgAdmin};
+  $("#app").innerHTML=P[V.page]();
+  if(V.page==="jobs")list();
+}
+render();
+</script>
+</body>
+</html>
